@@ -20,10 +20,6 @@ export default function Footer(): JSX.Element {
 
   return (
     <div className={styles.footer}>
-      <Link to="/help" className={styles['help-link']}>
-        HELP
-      </Link>
-
       <Box sx={{ fontSize: '1.05em', fontWeight: 300, opacity: 0.6, marginLeft: '8px', marginTop: 1 }}>
         {footer}
       </Box>

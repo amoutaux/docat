@@ -23,22 +23,6 @@ function App(): JSX.Element {
           element: <Home />
         },
         {
-          path: 'upload',
-          element: <Upload />
-        },
-        {
-          path: 'claim',
-          element: <Claim />
-        },
-        {
-          path: 'delete',
-          element: <Delete />
-        },
-        {
-          path: 'help',
-          element: <Help />
-        },
-        {
           path: ':project',
           children: [
             {

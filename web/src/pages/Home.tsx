@@ -94,35 +94,6 @@ export default function Home(): JSX.Element {
           }}>
             <SearchBar showFavourites={!showAll} onShowFavourites={onShowFavourites} />
           </Box>
-
-          <Box sx={{ display: 'flex' }}>
-            <Tooltip title="Upload Documentation" placement="right" arrow>
-              <IconButton
-                sx={{ marginLeft: 2, height: '46px', width: '46px', marginTop: '2px'}}
-                href="/upload"
-              >
-                <FileUpload></FileUpload>
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Claim a Project" placement="right" arrow>
-              <IconButton
-                sx={{ marginLeft: 2, height: '46px', width: '46px', marginTop: '2px'}}
-                href="/claim"
-              >
-                <Lock></Lock>
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Delete a project version" placement="right" arrow>
-              <IconButton
-                sx={{ marginLeft: 2, height: '46px', width: '46px', marginTop: '2px'}}
-                href="/delete"
-              >
-                <Delete></Delete>
-              </IconButton>
-            </Tooltip>
-          </Box>
         </Box>
 
         { projects.length === 0 ?
