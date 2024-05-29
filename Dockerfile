@@ -55,5 +55,8 @@ WORKDIR /app/docat
 # Copy the build artifact (.venv)
 COPY --from=backend /app /app/docat
 
+ARG DOCAT_VERSION
+LABEL org.opencontainers.image.version=$DOCAT_VERSION
+
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["sh", "-c", "envsubst '$MAX_UPLOAD_SIZE' < /app/docat/docat/nginx/default > /etc/nginx/sites-enabled/default && nginx && .venv/bin/python -m uvicorn --host 0.0.0.0 --port 5000 docat.app:app"]
