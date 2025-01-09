@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
   const { loadingFailed } = useProjects()
   const { stats, loadingFailed: statsLoadingFailed } = useStats()
   const { filteredProjects: projects, query } = useSearch()
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const [favoriteProjects, setFavoriteProjects] = useState<Project[]>([])
 
   document.title = 'Home | docat'
